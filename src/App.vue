@@ -10,9 +10,16 @@
 
 export default {
   name: 'App',
-
   data: () => ({
     //
   }),
 }
 </script>
+
+<style lang="css" scoped>
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+</style>
