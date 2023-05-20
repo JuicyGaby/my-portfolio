@@ -3,7 +3,6 @@
         <div class="topBtn">
             <BackToTopBtn />
         </div>
-
         <div class="main" id="about">
             <v-toolbar color="#1B1A17" class="px-10">
                 <v-toolbar-title>
@@ -30,45 +29,101 @@
             
             
         </div>
-        <div class="skills pa-5 d-flex justify-center align-center" id="skills">
-            <v-container class="">
-                <v-row
-                align-content="center"
-                >
-                    <v-col class="d-flex justify-center align-center">
-                        <h2 class="mx-1">Utilized Technologies</h2>
-                        <v-icon class="mx-1 text-h4">mdi-cogs</v-icon>
+
+        <div class="skills pa-5 d-flex flex-column justify-center align-center" id="skills">
+            
+            <div class="mb-5">
+                <h2 class="">Utilized Technologies</h2>
+                <hr>
+            </div>
+            <v-container class="fluid" >
+                <v-row class="mb-9">
+                    <v-col class="cards">
+                        <v-tooltip 
+                        activator="parent"
+                        location="bottom"
+                        >
+                        HTML5
+                        </v-tooltip>
+                        <!-- <v-icon class="text-h1" @mouseover="handleCards('html')" @mouseout="data.skills.isHovered = false" id="html">mdi-language-html5</v-icon> -->
+                        <v-icon class="text-h1" color="#F46527">mdi-language-html5</v-icon>
+                    </v-col>
+                    <v-col class="cards" width="">
+                        <v-tooltip 
+                        activator="parent"
+                        location="bottom"
+                        >
+                        CSS3
+                        </v-tooltip>
+                        <v-icon class="text-h1" color="#0E70B8">mdi-language-css3</v-icon>
+                    </v-col>
+                    <v-col class="cards">
+                        <v-tooltip 
+                        activator="parent"
+                        location="bottom"
+                        >
+                        JAVASCRIPT
+                        </v-tooltip>
+                        <v-icon class="text-h1" color="#E7A829">mdi-language-javascript</v-icon>
+                    </v-col>
+                    <v-col class="cards">
+                        <v-tooltip 
+                        activator="parent"
+                        location="bottom"
+                        >
+                        VUE3 JS
+                        </v-tooltip>
+                        <v-icon class="text-h1" color="#3FB984">mdi-vuejs</v-icon>
                     </v-col>
                 </v-row>
                 <v-row>
                     <v-col class="cards">
-                            <v-icon class="text-h1">mdi-language-html5</v-icon>
+                        <v-tooltip 
+                        activator="parent"
+                        location="bottom"
+                        >
+                        NODE JS
+                        </v-tooltip>
+                        <v-icon class="text-h1" color="#90C53F">mdi-nodejs</v-icon>
                     </v-col>
                     <v-col class="cards">
-                            <v-icon class="text-h1">mdi-language-css3</v-icon>
+                        <v-tooltip 
+                        activator="parent"
+                        location="bottom"
+                        >
+                        PYTHON
+                        </v-tooltip>
+                        <v-icon class="text-h1" color="#2D6B9B">mdi-language-python</v-icon>
                     </v-col>
                     <v-col class="cards">
-                            <v-icon class="text-h1">mdi-language-javascript</v-icon>
+                        <v-tooltip 
+                        activator="parent"
+                        location="bottom"
+                        >
+                        BOOTSTRAP
+                        </v-tooltip>
+                        <v-icon class="text-h1" color="#7D0AF8">mdi-bootstrap</v-icon>
                     </v-col>
                     <v-col class="cards">
-                            <v-icon class="text-h1">mdi-vuejs</v-icon>
-                    </v-col>
-                    <v-col class="cards">
-                            <v-icon class="text-h1">mdi-nodejs</v-icon>
-                    </v-col>
-                    <v-col class="cards">
-                            <v-icon class="text-h1">mdi-language-python</v-icon>
-                    </v-col>
-                    <v-col class="cards">
-                            <v-icon class="text-h1">mdi-bootstrap</v-icon>
-                    </v-col>
-                    <v-col class="cards">
-                            <v-icon class="text-h1">mdi-git</v-icon>
+                        <v-tooltip 
+                        activator="parent"
+                        location="bottom"
+                        >
+                        GIT
+                        </v-tooltip>
+                        <v-icon class="text-h1" color="#F05033">mdi-git</v-icon>
                     </v-col>
                 </v-row>
             </v-container>
         </div>
-        <div class="projects" id="projects">
+        <div class="projects d-flex justify-center align-center flex-column" id="projects">
+            <div class="">
+                <h2>Projects Developed</h2>
+                <hr>
+            </div>
+            <v-container grid-list-xs>
+                
+            </v-container>
         </div>
         <!-- <BackToTopBtn /> -->
         <div class="footer" id="contact">
@@ -81,12 +136,16 @@
 import BackToTopBtn from '../components/BackToTopBtn.vue'
 
 export default {
-    components : {
-      BackToTopBtn,
+    components: {
+        BackToTopBtn,
     },
     data() {
         return {
-
+            data: {
+                skills: {
+                    isHovered: false,
+                }
+            }
         }
     },
     methods: {
@@ -96,37 +155,50 @@ export default {
                 behavior: 'smooth',
                 top: destination.offsetTop
             })
-        }
+        },
     },
 }
 </script>
 <style lang="css" scoped>
 .root {
-    --border : 1px red dashed;
-    --darkBg : #1B1A17;
-    --lightBg : #242320;
+    --border: 1px red dashed;
+    --darkBg: #1B1A17;
+    --lightBg: #242320;
     --textColor: #F0E3CA;
     --accent: #FF8303;
     --accent2: #A35709;
 }
+
 * {
-    border: var(--border);
+    /* border: var(--border); */
 }
 
 html {
     scroll-behavior: smooth;
 }
+
+hr {
+    border-color: var(--accent);
+    height: 4px;
+    background-color: var(--accent);
+}
+h2 {
+    color: var(--accent);
+}
+
 /* main starts */
 
 
 .logo {
     color: var(--accent);
 }
+
 .topBtn {
     position: fixed;
     bottom: 8%;
     right: 5%;
 }
+
 .main {
     height: 80vh;
     width: 100%;
@@ -145,6 +217,7 @@ ul li a {
     color: var(--textColor);
     transition: all .5s;
 }
+
 ul li a:hover {
     color: var(--accent);
 }
@@ -153,6 +226,7 @@ ul li a:hover {
     height: 10%;
     border: 1px solid black;
 }
+
 /* main ends */
 /* description starts */
 .description {
@@ -161,39 +235,45 @@ ul li a:hover {
     background-color: var(--darkBg);
 
 }
+
 .description p {
     color: var(--textColor);
 }
+
 .description h2 {
     color: var(--accent);
 }
+
 /* description end */
 /* skills starts */
 
 .skills {
     height: 100vh;
     width: 100%;
-    background-color: var(--lightBg);
+    background-color: var(--darkBg);
 }
+
 .cards {
-    background: var(--darkBg);
+    background: var(--lightBg);
+    border-radius: 5px;
     display: flex;
     align-items: center;
     justify-content: center;
+    /* padding: 3em; */
+    margin: .5em;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
 }
-.cards span {
-    height: 4rem;
-}
+
 /* skills ends */
 .projects {
     height: 100vh;
     width: 100%;
-    background-color: var(--darkBg);
+    background-color: var(--lightBg);
 }
 
 .footer {
     height: 20vh;
     width: 100%;
-    background-color: var(--lightBg);
+    background-color: var(--darkBg);
 }
 </style>
