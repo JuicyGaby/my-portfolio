@@ -2,6 +2,8 @@
     <transition name="fade">
         <v-btn
         v-if="showButton"
+        color="#FF8303"
+        size="large"
         icon="mdi-chevron-up"
         class="back-to-top-button"
         @click="scrollToTop"
