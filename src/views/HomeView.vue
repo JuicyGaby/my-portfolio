@@ -15,7 +15,6 @@
                     <li><a @click="scrollToElement('#contact')">Contact</a></li>
                 </ul>
             </v-toolbar>
-            
         </div>
         <div class="description d-flex flex-column justify-center align-center" id="">
             <h2 class="mb-3">About Me</h2>
@@ -126,9 +125,32 @@
             </v-container>
         </div>
         <!-- <BackToTopBtn /> -->
-        <div class="footer" id="contact">
-        </div>
+        <footer id="contact">
+            <v-footer
+            color="#FF8303"
+            class="
+            text-center
+            d-flex
+            flex-column
+            "
+            >   
+                <div class="">
+                    <v-btn
+                    v-for="icon in icons"
+                    :key="icon"
+                    class="mx-4"
+                    :icon="icon"
+                    variant="text"
+                    ></v-btn>
+                </div>
+                <v-divider></v-divider>
+                <div class="">
+                    2023 - Gabe Fletcher Sanchez
+                </div>
+            </v-footer>
+        </footer>
     </div>
+    
 </template>
 <script>
 
@@ -145,7 +167,14 @@ export default {
                 skills: {
                     isHovered: false,
                 }
-            }
+            },
+            icons: [
+                'mdi-facebook',
+                'mdi-twitter',
+                'mdi-instagram',
+                'mdi-linkedin',
+                'mdi-github',
+            ]
         }
     },
     methods: {
@@ -197,7 +226,9 @@ h2 {
     position: fixed;
     bottom: 8%;
     right: 5%;
+    z-index: 100;
 }
+
 
 .main {
     height: 80vh;
