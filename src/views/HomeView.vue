@@ -22,10 +22,10 @@
             <div class="hero d-flex">
                 <div class="col col-1 d-flex align-center pa-10">
                     <div class="">
-                        <p class="text-h2">Gabe Fletcher Sanchez</p>
-                        <v-divider class="my-2"></v-divider>
-                        <p class="text-h4">Junior Full Stack Developer</p>
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Recusandae, labore illo? Suscipit esse placeat corporis?</p>
+                        <!-- <p class="text-h2" style="color : var(--accent)">Ga</p> -->
+                        <p class="name">Gabe Fletcher Sanchez</p>
+                            <p class="role">Junior Full Stack Developer</p>                    
+                        <p style="color : var(--textColor)">Lorem ipsum dolor sit amet consectetur adipisicing elit. Recusandae, labore illo? Suscipit esse placeat corporis?</p>
 
                     </div>
                 </div>
@@ -206,6 +206,7 @@ export default {
 }
 </script>
 <style lang="css" scoped>
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&family=Poppins:wght@400;500;600;700&display=swap');
 
 .root {
     --border: 1px red dashed;
@@ -219,6 +220,9 @@ export default {
 
 * {
     /* border: var(--border); */
+
+    font-family: 'Montserrat', sans-serif;
+    font-family: 'Poppins', sans-serif;
 }
 
 html {
@@ -270,11 +274,6 @@ ul li a:hover {
     color: var(--accent);
 }
 
-
-/* main ends */
-/* description starts */
-.nav {
-}
 .hero {
     height: 100%;
     width: 100%;
@@ -284,6 +283,19 @@ ul li a:hover {
     border: var(--borderBlue);
     width: 50%;
 }
+.name {
+    font-size: 3.5rem;
+    font-weight: 500;
+    color: var(--accent);
+}
+.role {
+    font-size: 2rem;
+    font-weight: 600;
+    color: var(--textColor);
+}
+
+/* main ends */
+/* description starts */
 .description {
     height: 20vh;
     width: 100%;
