@@ -3,29 +3,40 @@
         <div class="topBtn">
             <BackToTopBtn />
         </div>
-        <div class="main" id="about">
-            <v-toolbar color="#1B1A17" class="px-10">
-                <v-toolbar-title>
-                    <span class="logo">JuicyGaby</span>
-                </v-toolbar-title>
-                <ul class="d-inline-flex no-text-decoration">
-                    <li><a @click="scrollToElement('#about')">About Me</a></li>
-                    <li><a @click="scrollToElement('#skills')">Skills</a></li>
-                    <li><a @click="scrollToElement('#projects')">Projects</a></li>
-                    <li><a @click="scrollToElement('#contact')">Contact</a></li>
-                </ul>
-            </v-toolbar>
+        <div class="main d-flex flex-column" id="about">
+            <div class="d-flex flex-column">
+                <nav>
+                    <v-toolbar color="#1B1A17" class="px-10">
+                        <v-toolbar-title>
+                            <span class="logo">JuicyGaby</span>
+                        </v-toolbar-title>
+                        <ul class="d-inline-flex no-text-decoration">
+                            <li><a @click="scrollToElement('#about')">About Me</a></li>
+                            <li><a @click="scrollToElement('#skills')">Skills</a></li>
+                            <li><a @click="scrollToElement('#projects')">Projects</a></li>
+                            <li><a @click="scrollToElement('#contact')">Contact</a></li>
+                        </ul>
+                    </v-toolbar>
+                </nav>
+            </div>
+            <div class="hero d-flex">
+                <div class="col col-1">
+                    <h1>asd</h1>
+                </div>
+                <div class="col col-2">
+                    <h1>asdasda</h1>
+                </div>
+            </div>
         </div>
+        
         <div class="description d-flex flex-column justify-center align-center" id="">
             <h2 class="mb-3">About Me</h2>
             <div class="d-flex justify-space-between align-center">
-        
                 <v-icon icon="mdi-information" class="mr-5" size="x-large"></v-icon>
                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.
                     Vitae deserunt <br> laudantium odit quo temporibus soluta qui
                     commodi modi veritatis ducimus.</p>
             </div>
-            
             
         </div>
 
@@ -191,6 +202,7 @@ export default {
 <style lang="css" scoped>
 .root {
     --border: 1px red dashed;
+    --borderBlue: 1px blue dashed;
     --darkBg: #1B1A17;
     --lightBg: #242320;
     --textColor: #F0E3CA;
@@ -217,7 +229,6 @@ h2 {
 
 /* main starts */
 
-
 .logo {
     color: var(--accent);
 }
@@ -228,7 +239,6 @@ h2 {
     right: 5%;
     z-index: 100;
 }
-
 
 .main {
     height: 80vh;
@@ -253,13 +263,20 @@ ul li a:hover {
     color: var(--accent);
 }
 
-.navbar {
-    height: 10%;
-    border: 1px solid black;
-}
 
 /* main ends */
 /* description starts */
+.nav {
+}
+.hero {
+    height: 100%;
+    width: 100%;
+    border: var(--borderBlue);
+}
+.col {
+    border: var(--borderBlue);
+    width: 50%;
+}
 .description {
     height: 20vh;
     width: 100%;
