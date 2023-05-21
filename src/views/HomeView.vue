@@ -20,11 +20,17 @@
                 </nav>
             </div>
             <div class="hero d-flex">
-                <div class="col col-1">
-                    <h1>asd</h1>
+                <div class="col col-1 d-flex align-center pa-10">
+                    <div class="">
+                        <p class="text-h2">Gabe Fletcher Sanchez</p>
+                        <v-divider class="my-2"></v-divider>
+                        <p class="text-h4">Junior Full Stack Developer</p>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Recusandae, labore illo? Suscipit esse placeat corporis?</p>
+
+                    </div>
                 </div>
-                <div class="col col-2">
-                    <h1>asdasda</h1>
+                <div class="col col-2 d-flex justify-center align-center">
+                    <img src="http://placehold.it/300x300" alt="">
                 </div>
             </div>
         </div>
@@ -200,6 +206,7 @@ export default {
 }
 </script>
 <style lang="css" scoped>
+
 .root {
     --border: 1px red dashed;
     --borderBlue: 1px blue dashed;
