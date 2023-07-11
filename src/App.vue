@@ -23,11 +23,16 @@ export default {
 }
 .root {
   --border: 1px dashed red;
+  --darkBG: #1B1A17;
+  --lightBG: #242320 ;
+  --orangeDark: #A35709;
+  --orangeLight: #FF8303;
+  --textColor: #F0E3CA;
 
 }
 .div-container {
   height: 100vh;
   width: 100%;
-  border: var(--border);
+  /* border: var(--border); */
 }
 </style>
