@@ -1,6 +1,6 @@
 <template>
   <v-app>
-    <v-main>
+    <v-main class="root">
       <router-view/>
     </v-main>
   </v-app>
@@ -20,5 +20,14 @@ export default {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+}
+.root {
+  --border: 1px dashed red;
+
+}
+.div-container {
+  height: 100vh;
+  width: 100%;
+  border: var(--border);
 }
 </style>
