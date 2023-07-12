@@ -3,7 +3,7 @@
     <Navbar ></Navbar>
     <v-container fluid class="about pa-0">
       <v-row class="border-red ma-0">
-        <v-col class="d-flex flex-wrap jutsify-center">
+        <v-col class="d-flex flex-wrap jutsify-center" cols="12" md="6">
           <div class="details d-flex flex-fill justify-center align-center flex-column px-5">
             <p
             class="text-center text-lg-h2 text-md-h3 text-sm-h4 text-h3 font-weight-bold"
@@ -12,8 +12,9 @@
             <p class="text-h6 text-center" :style="{ color: '#F0E3CA' }">Empowering Businesses through Seamless Digital Solutions.</p>
           </div>
         </v-col>
-        <v-col class="d-flex justify-center align-center">
-            <img src="http://placehold.it/360x400" alt="Dummy Image" />
+        <v-col class="d-flex justify-center align-center" cols="12" md="6">
+            <v-sheet color="primary" width="30rem" height="25rem" height-sm="10rem" rounded="rounded" elevation="10">
+            </v-sheet>
         </v-col>
       </v-row>
     </v-container>
@@ -33,7 +34,7 @@ export default {
   height: 100%;
 }
 div {
-  border: var(--border);
+  /* border: var(--border); */
 }
 .about {
   height: 100%;
