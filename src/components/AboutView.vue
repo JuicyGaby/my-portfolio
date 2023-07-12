@@ -33,9 +33,9 @@ export default {
 .border-red {
   height: 100%;
 }
-div {
-  /* border: var(--border); */
-}
+/* div {
+  border: var(--border);
+} */
 .about {
   height: 100%;
 }
