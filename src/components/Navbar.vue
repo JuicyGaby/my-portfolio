@@ -1,5 +1,5 @@
 <template lang="">
-  <div class="nav">
+  <div class="nav mb-10 mb-sm-0">
     <v-toolbar color="#1B1A17" elevation="5">
       <v-container fluid>
         <v-row>

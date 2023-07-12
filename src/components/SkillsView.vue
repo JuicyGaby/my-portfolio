@@ -6,12 +6,12 @@
       <v-container>
         <v-row>
           <v-col v-for="tech in isLanguage" class="grid-col">
-            <p class="text-h3 text-sm-h1"><v-icon size="x-large" :color="tech.color" :icon="getIcon(tech)"></v-icon></p>
+            <p class="text-h3 text-sm-h2 text-md-h1"><v-icon size="x-large" :color="tech.color" :icon="getIcon(tech)"></v-icon></p>
           </v-col>
         </v-row>
         <v-row>
           <v-col v-for="tech in notALanguage" class="grid-col">
-            <p class="text-h3 text-sm-h1"><v-icon size="x-large" :color="tech.color" :icon="getIcon(tech)"></v-icon></p>
+            <p class="text-h3 text-sm-h2 text-md-h1"><v-icon size="x-large" :color="tech.color" :icon="getIcon(tech)"></v-icon></p>
           </v-col>
         </v-row>
         </v-container>
