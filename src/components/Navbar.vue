@@ -47,7 +47,7 @@ export default {
 </script>
 <style lang="css" scoped>
 div {
-  border: var(--border);
+  /* border: var(--border); */
 }
 a {
   text-decoration: none;

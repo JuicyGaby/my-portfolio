@@ -2,8 +2,9 @@
   <div class="">
     <AboutView ></AboutView>
     <Skills ></Skills>
+    <Projects ></Projects>
+    <Footer ></Footer>
   </div>
-  <!-- <Skills ></Skills> -->
 </template>
 <script>
 import AboutView from '../components/AboutView.vue';
@@ -14,7 +15,10 @@ import Footer from '../components/Footer.vue'
 export default {
   components: {
     AboutView,
-    Skills
+    Skills,
+    Projects,
+    Footer
+  
   },
   data() {
     return {
@@ -28,5 +32,8 @@ export default {
   height: 100vh;
   width: 100%;
   background-color: var(--darkBG);
+}
+.b2 {
+  border: var(--border2);
 }
 </style>
