@@ -12,9 +12,8 @@
             <p class="text-h6 text-center" :style="{ color: '#F0E3CA' }">Empowering Businesses through Seamless Digital Solutions.</p>
           </div>
         </v-col>
-        <v-col class="d-flex justify-center align-center" cols="12" md="6">
-            <v-sheet class="profile" width="30rem" height="30rem" height-sm="10rem" rounded="rounded" elevation="10">
-            </v-sheet>
+        <v-col class="profile d-flex justify-center align-center" cols="12" md="6">
+          <!-- <v-sheet class="profile" width="25rem" height="25rem" height-sm="10rem" height-md="5rem" rounded="rounded" elevation="10"></v-sheet> -->
         </v-col>
       </v-row>
     </v-container>
@@ -41,8 +40,8 @@ div {
   gap: 1em;
 }
 .profile {
-  background-image: url('../../public/images/1.jpg');
+  /* background-image: url('/public/images/1.jpg');
   background-size: cover;
-  background-position: top;
+  background-position: top; */
 }
 </style>
