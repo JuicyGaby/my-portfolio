@@ -1,7 +1,6 @@
 <template lang="">
   <div class="div-container pa-10 d-flex flex-column justify-center align-center" id="skills">
     <p class="text-h3 font-weight-bold mb-5" :style="{ color: '#FF8303' }">Technologies</p>
-    
     <div class="">
       <v-container>
         <v-row>
